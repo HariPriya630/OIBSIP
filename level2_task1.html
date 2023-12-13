@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		td{
+			text-align: center;
+			font-weight: bold;
+			margin-right: 5px;
+			margin-left: 5px;
+			color: white;
+			border-radius: 0px;
+		}
+		td:not(#result_id){
+			cursor: pointer;
+			border-radius: 5px;
+			background-color: ;
+		}
+	</style>
+</head>
+<body>
+	<center><h1>Caluclator</h1></center>
+	<center><table border="" cellspacing="0" cellpadding="6" style="height:370px;width: 250px;background-color: black;">
+		<tr >
+			<td colspan="4" style="height: 70px;text-align: right;font-size: 2em;" id="result_id"></td>
+		</tr>
+		<tr>
+			<td onclick="getnum('1/')"style="background-color: #454545;">1/</td>
+			<td onclick="getnum('**2')"style="background-color: #454545;">**2</td>
+			<td onclick="getnum('%')"style="background-color: #454545;">%</td>
+			<td onclick="getnum('**(1/2)')"style="background-color: #454545;">**(1/2)</td>
+		</tr>
+		<tr>
+			<td onclick="getnum('9')"style="background-color: #454545;">9</td>
+			<td onclick="getnum('8')"style="background-color: #454545;">8</td>
+			<td onclick="getnum('7')"style="background-color: #454545;">7</td>
+			<td onclick="getnum('/')"style="background-color: #454545;">/</td>
+		</tr>
+		<tr>
+			<td onclick="getnum('6')"style="background-color: #73777B;">6</td>
+			<td onclick="getnum('5')"style="background-color: #73777B;">5</td>
+			<td onclick="getnum('4')"style="background-color: #73777B;">4</td>
+			<td onclick="getnum('*')"style="background-color: #454545;">*</td>
+		</tr>
+		<tr>
+			<td onclick="getnum('3')"style="background-color: #73777B;">3</td>
+			<td onclick="getnum('2')"style="background-color: #73777B;">2</td>
+			<td onclick="getnum('1')"style="background-color: #73777B;">1</td>
+			<td onclick="getnum('-')"style="background-color: #454545;">-</td>
+		</tr>
+		<tr>
+			<td onclick="getnum('0')"style="background-color: #73777B;">0</td>
+			<td onclick="clearall('c')"style="background-color: #73777B;">c</td>
+			<td onclick="getnum('=')"style="background-color: #73777B;">=</td>
+			<td onclick="getnum('+')"style="background-color: #454545;">+</td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+		function getnum(val){
+			if (val=='=') {
+				var res = document.getElementById('result_id').innerText;
+				document.getElementById('result_id').innerText=eval(res);
+			} 
+			else {
+				document.getElementById('result_id').innerText += val;
+			}
+		}
+		function clearall(){
+			document.getElementById('result_id').innerText=''
+		}
+	</script>
+</body>
+</html>
