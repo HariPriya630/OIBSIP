@@ -1,0 +1,33 @@
+header{
+	height: 200px;
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+h1{
+	padding-top: 90px;
+}
+section{
+	height: 250px;
+	width: 100%;
+}
+nav{
+	width: 35%;
+	float: left;
+}
+img{
+	width: 400px;
+	height: 250px;
+}
+article{
+	padding-top: 50px;
+	width: 65%;
+	float: right;
+}
+footer{
+	background-color: black;
+	color: white;
+	height: 100px;
+	padding-top: 40px;
+	text-align: center;
+}
